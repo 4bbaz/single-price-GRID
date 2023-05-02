@@ -1,0 +1,84 @@
+.grid {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-inline: 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 600px;
+
+  &__join,
+  &__subscription,
+  &__whyus {
+    padding: 2rem;
+    display: grid;
+    // gap: 0.5rem;
+    color: var(--white);
+  }
+
+  &__join {
+    h1 {
+      color: var(--Cyan);
+    }
+    h2 {
+      color: var(--Bright-Yellow);
+    }
+    p {
+      color: var(--gray);
+    }
+  }
+
+  &__subscription {
+    background-color: var(--Cyan);
+
+    .price {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: xx-large;
+    }
+    span {
+      color: var(--Light-Gray);
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border-style: none;
+      background-color: var(--Bright-Yellow);
+      color: var(--white);
+      font-size: large;
+      border-radius: 6px;
+    }
+  }
+
+  &__whyus {
+    background-color: var(--Cyan-light);
+
+    p {
+      padding-right: 6rem;
+      color: var(--Light-Gray);
+    }
+  }
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+
+    &__join {
+      grid-column: 2 span;
+    }
+    &__whyus {
+      p {
+        padding-right: 2rem;
+      }
+    }
+  }
+}

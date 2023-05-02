@@ -1,0 +1,135 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  background-color: var(--Light-Gray);
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+button {
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan-light: hsl(179, 82%, 33%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --gray:hsl(0, 0%, 50%);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: large;
+}
+
+h2 {
+  font-size: medium;
+}
+
+p {
+  font-weight: 400;
+  margin-top: 0;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.grid {
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-inline: 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 600px;
+}
+.grid__join, .grid__subscription, .grid__whyus {
+  padding: 2rem;
+  display: grid;
+  color: var(--white);
+}
+.grid__join h1 {
+  color: var(--Cyan);
+}
+.grid__join h2 {
+  color: var(--Bright-Yellow);
+}
+.grid__join p {
+  color: var(--gray);
+}
+.grid__subscription {
+  background-color: var(--Cyan);
+}
+.grid__subscription .price {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  gap: 1rem;
+}
+.grid__subscription h2 {
+  margin: 0;
+  font-size: xx-large;
+}
+.grid__subscription span {
+  color: var(--Light-Gray);
+}
+.grid__subscription p {
+  font-size: 1rem;
+}
+.grid__subscription button {
+  padding: 0.5rem 1rem;
+  border-style: none;
+  background-color: var(--Bright-Yellow);
+  color: var(--white);
+  font-size: large;
+  border-radius: 6px;
+}
+.grid__whyus {
+  background-color: var(--Cyan-light);
+}
+.grid__whyus p {
+  padding-right: 6rem;
+  color: var(--Light-Gray);
+}
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid__join {
+    grid-column: 2 span;
+  }
+  .grid__whyus p {
+    padding-right: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
